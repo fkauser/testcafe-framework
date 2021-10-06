@@ -11,11 +11,7 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       
-      - run:
-          name: create folder
-          command: |
-            echo "*** my artifact reports ***"
-            mkdir -p test-results/testcafe
+
       
       - run:
           command: npm run test:chrome
