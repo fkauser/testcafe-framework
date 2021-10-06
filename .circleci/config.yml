@@ -11,4 +11,4 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       - run:
-          command: node runner.js
+          command: npm run testcafe chrome:headless ./tests/mytest.js
