@@ -10,16 +10,16 @@ jobs:
       - checkout
       - browser-tools/install-browser-tools
       - node/install-packages
-      - run:
-          command: npm run test:chrome
-          
+      
       - run:
           name: create folder
           command: |
             echo "*** my artifact reports ***"
             mkdir -p test-results/testcafe
-            cp ./testcafe/testcafe-report-*.xml test-results/testcafe
-            cp ./testcafe/testcafe-report-*.json test-results/testcafe
+      
+      - run:
+          command: npm run test:chrome
+          
+    
+        
 
-      - store_artifacts:
-          path: test-results/testcafe
