@@ -20,6 +20,9 @@ jobs:
       - run:
           command: npm run test:chrome
           
+      - store_artifacts:
+          path: test/test-results
+          
     
         
 
