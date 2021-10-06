@@ -26,6 +26,9 @@
     "testcafe": "^1.16.0",
     "testcafe-reporter-cucumber-json": "^6.3.0",
     "testcafe-reporter-html": "^1.4.6",
-    "xpath-to-css": "^1.0.5"
+    "xpath-to-css": "^1.0.5",
+    "testcafe": "*",
+    "testcafe-reporter-xunit": "*"
+    
   }
 }
