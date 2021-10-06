@@ -11,4 +11,8 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       - run:
-          command: npm run testcafe chrome:headless ./tests/mytest.js
+          command: npm run test:chrome:headles
+          
+          
+      - store_test_results:
+          path: /test/test-results
