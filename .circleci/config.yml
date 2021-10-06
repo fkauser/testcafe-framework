@@ -11,4 +11,4 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       - run:
-          command: npm run test:chrome
+          command: node runner.js
