@@ -4,7 +4,7 @@
   "description": "testing with testcafe",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome ./tests/mytest.js -r xunit:/test/test-results/testcafe/results.xml",
+    "test:chrome": "testcafe chrome ./tests/mytest.js",
     "test:chrome:headless": "testcafe chrome:headless ./tests/mytest.js -s takeOnFails=true",
     "test:chrome:report": "testcafe chrome ./tests/mytest.js -s takeOnFails=true --reporter cucumber-json --reporter-json-folder=reports",
     "test:chrome:2": "testcafe -c 2 chrome ./tests --reporter json:reports/report.json,html:reports/Htmlreport.html",
