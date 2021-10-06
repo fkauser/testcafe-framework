@@ -13,6 +13,13 @@ jobs:
       - run:
           command: npm run test:chrome
           
-          
-      - store_test_results:
-          path: /test/test-results
+      - run:
+          name: create folder
+          command: |
+            echo "*** my artifact reports ***"
+            mkdir -p test-results/testcafe
+            cp ./testcafe/testcafe-report-*.xml test-results/testcafe
+            cp ./testcafe/testcafe-report-*.json test-results/testcafe
+
+      - store_artifacts:
+          path: test-results/testcafe
