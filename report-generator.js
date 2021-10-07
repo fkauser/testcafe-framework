@@ -5,8 +5,8 @@ const projectVersion = process.env.npm_package_version;
 const reportGenerationTime = new Date().toISOString();
 report.generate({
   reportName: 'Test Report',
-  jsonDir: 'reports',
-  reportPath: 'reports/cucumber/html',
+  jsonDir: `$(ls test-results/testcafe/reports/*.json)`,
+  reportPath: 'test-results/testcafe/html',
   openReportInBrowser: true,
   disableLog: true,
   displayDuration: true,
