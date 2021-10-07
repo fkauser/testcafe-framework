@@ -5,7 +5,7 @@ const projectVersion = process.env.npm_package_version;
 const reportGenerationTime = new Date().toISOString();
 report.generate({
   reportName: 'Test Report',
-  jsonDir: `$(ls test-results/testcafe/reports/*.json)`,
+  jsonDir: 'https://${CIRCLE_BUILD_NUM}-414104711-gh.circle-artifacts.com/0/$(ls test-results/testcafe/reports/*.json)',
   reportPath: 'test-results/testcafe/html',
   openReportInBrowser: true,
   disableLog: true,
