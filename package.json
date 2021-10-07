@@ -4,7 +4,8 @@
   "description": "testing with testcafe",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome ./tests/mytest.js -r json:test-results/testcafe/results.json,html:test-results/testcafe/Htmlreport.html",
+    "test:chrome:orginal:html": "testcafe chrome ./tests/mytest.js -r json:test-results/testcafe/results.json,html:test-results/testcafe/Htmlreport.html",
+     "test:chrome": "testcafe chrome ./tests/mytest.js --reporter cucumber-json --reporter-json-folder=test-results/testcafe/reports",
     "test:chrome:headless": "testcafe chrome:headless ./tests/mytest.js -s takeOnFails=true",
     "test:chrome:report": "testcafe chrome ./tests/mytest.js -s takeOnFails=true --reporter cucumber-json --reporter-json-folder=reports",
     "test:chrome:2": "testcafe -c 2 chrome ./tests --reporter json:reports/report.json,html:reports/Htmlreport.html",
