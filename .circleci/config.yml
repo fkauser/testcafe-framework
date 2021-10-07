@@ -19,11 +19,11 @@ jobs:
       - store_artifacts:
           path: test-results/testcafe
           
-          
       - run:
-          command: npm run html:report
+          name: ECHO
+          command: |
+            echo "*** my artifact reports ***"    
+            echo  "$(ls test-results/testcafe/reports/*.json)"
           
-      - store_artifacts:
-           path: test-results/testcafe
-        
+    
 
