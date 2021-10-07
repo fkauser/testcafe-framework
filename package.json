@@ -12,7 +12,7 @@
     "test:firefox": "testcafe firefox ./tests",
        "test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./tests",
     "test:safari": "testcafe safari ./tests",
-    "html:report": "node report-generator.js"
+    "html:report": "node ./report-generator.js"
   },
   "keywords": [
     "testcafe",
