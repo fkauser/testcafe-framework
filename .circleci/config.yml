@@ -19,6 +19,11 @@ jobs:
       - store_artifacts:
           path: test-results/testcafe
           
-    
+          
+      - run:
+          command: npm run html:report
+          
+      - store_artifacts:
+           path: test-results/testcafe
         
 
