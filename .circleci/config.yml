@@ -24,6 +24,13 @@ jobs:
           command: |
             echo "*** my artifact reports ***"    
             echo  "$(ls test-results/testcafe/reports/*.json)"
+            
+            
+      - run:
+          command: node ./report-generator.js
+          
+      - store_artifacts:
+          path: test-results/testcafe
           
     
 
